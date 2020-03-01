@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="col-md-4 offset-4 card mt-4">
+    <div class="card-body">
+      <h1>Signup</h1>
+      <form #form="ngForm" (ngSubmit)="signup(form)">
+        <div class="form-group">
+          <input
+            required
+            ngModel
+            type="text"
+            name="username"
+            class="form-control"
+            placeholder="username"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            required
+            ngModel
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter email...."
+          />
+        </div>
+        <div class="form-group">
+          <input
+            required
+            ngModel
+            type="password"
+            name="password"
+            class="form-control"
+            placeholder="password"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            required
+            ngModel
+            type="text"
+            name="phonenumber"
+            class="form-control"
+            placeholder="phonenumber"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            required
+            ngModel
+            type="text"
+            name="location"
+            class="form-control"
+            placeholder="Enter location"
+          />
+        </div>
+
+        <div class="form-group">
+          <button [disabled]="!form.valid" class="btn btn-success btn-block">
+            Signup
+          </button>
+
+          <div class="form-group">
+            <span>Already have an account ? please</span>
+            <a routerLink="/login">Login</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
